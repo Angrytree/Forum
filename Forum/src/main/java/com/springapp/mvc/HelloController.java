@@ -7,13 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-
 public class HelloController {
-	@RequestMapping(method = RequestMethod.GET)
-	public String printWelcome(ModelMap model) {
-		model.addAttribute("message", "Hello world!");
-		return "Login";
-	}
 
 	@RequestMapping(value = "/send", method = RequestMethod.POST)
 	public String addUser(@RequestParam("data") String data,ModelMap model) {
